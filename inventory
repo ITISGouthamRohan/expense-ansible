@@ -1,2 +1,8 @@
 [db]
 db.itsgouthamrohan.site
+
+[backend]
+backend.itsgouthamrohan.site
+
+[frontend]
+itsgouthamrohan.site
