@@ -4,14 +4,14 @@
   vars:
      login_host: db.itsgouthamrohan.site
   tasks:
-  - name: install MYSQl Server
+  - name: Install MYSQl Server
     ansible.builtin.dnf:
       name: mysql-server 
       state: latest
 
-  - name: start and Enable MYSQL Server
+  - name: Start and Enable MySQL server
     ansible.builtin.service:
-      name:  mysqld
+      name: mysqld
       state: started
       enabled: yes
 
@@ -35,7 +35,7 @@
       login_password: ExpenseApp@1
       login_host: "{{ login_host }}"
       filter: version   
-    ignore errors: yes
+    ignore_errors: yes
     register: mysql_connection_output
 
   - name: print output 
